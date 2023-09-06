@@ -1,3 +1,15 @@
+body {
+    display: flex;
+    justify-content: center; /* Mengatur formulir ke tengah secara horizontal */
+    align-items: center; /* Mengatur formulir ke tengah secara vertikal */
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center; /* Mengatur teks di dalam container ke tengah */
+}
+
 /* Reset some default styles */
 * {
     margin: 0;
