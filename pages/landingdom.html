@@ -4,11 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>produk html</title>
-    <link rel="stylesheet" href="styleproduct.css">
-    <h1 class="gallery-heading">TITI GALLERY</h1>
-</head>
-<body>  
+    <link rel="stylesheet" href="../pages/stylelandingdom.css">
 
+</head>
+<body>
+  <header>
+        <h1 class="brand-name">Titi Galeri</h1>
+        <nav>
+            <ul>
+                <li><a href="#produk">Home</a></li>
+                <li><a href="#tentang-kami">About</a></li>
+                <li><a href="#kontak">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h2>Selamat Datang di Butik Titi Galeri</h2>
+            <p>Temukan Gaya Anda yang Unik dan Elegan</p>
+            <a href="#produk" class="btn">Jelajahi Produk Kami</a>
+        </div>
+    </section>
+  
+  
+    
+        
+    <h1 class="gallery-heading">TITI GALLERY</h1>
+  <div class="product-container">
+   <div class="carousel">
     <div class="product-card">
         <img src="../assets/gambar2.jpg">
         <div class="product-details">
@@ -116,6 +140,68 @@
             <p class="product-price">Rp.4.990.00</p>
             <button class="beli-button">Beli</button>
             </div>
-        </div>
+     </div>
+    </div>
+    <button class="carousel-prev" onclick="prevSlide()">Previous</button>
+    <button class="carousel-next" onclick="nextSlide()">Next</button>
+  
+
+    <footer>
+        <p>&copy; 2023 Titi Galeri. All rights reserved.</p>
+        <p><a href="#">Kebijakan Privasi</a> | <a href="#">Syarat dan Ketentuan</a></p>
+        <p>Kontak: info@titigaleri.com</p>
+    </footer>
+  </div>
+  
+
+  <script src="../pages/script.js"></script>
+  <script>
+    function moveTextLeft() {
+        var textElement = document.querySelector('.hero-content h2'); // Pilih elemen teks yang ingin Anda gerakkan
+        var position = window.innerWidth; // Atur posisi awal di luar layar di sebelah kanan
+
+        function animate() {
+            if (position <= -textElement.clientWidth) {
+                position = window.innerWidth; // Kembali ke posisi awal di luar layar di sebelah kanan jika mencapai batas kiri
+            }
+
+            position -= 2; // Pergerakan ke kiri sebesar 2 pixel per frame
+            textElement.style.transform = 'translateX(' + position + 'px)';
+
+            requestAnimationFrame(animate); // Rekursif untuk animasi yang mulus
+        }
+
+        animate(); // Panggil fungsi animasi
+    }
+
+    window.addEventListener('load', moveTextLeft); // Aktifkan pergerakan teks saat halaman dimuat
+    
+    function changeTextColor() {
+        var productTitle = document.querySelectorAll('.product-title'); // Pilih semua elemen dengan kelas "product-title"
+
+        // Daftar warna yang mungkin
+        var colors = ["red", "blue", "green", "orange", "purple", "pink"];
+
+        function getRandomColor() {
+            var randomIndex = Math.floor(Math.random() * colors.length);
+            return colors[randomIndex];
+        }
+
+        function changeColor() {
+            productTitle.forEach(function (element) {
+                element.style.color = getRandomColor(); // Atur warna teks secara acak
+            });
+
+            setTimeout(changeColor, 3000); // Ganti warna setiap 3 detik
+        }
+
+        changeColor(); // Panggil fungsi untuk pertama kali
+    }
+
+    window.addEventListener('load', changeTextColor); // Aktifkan perubahan warna saat halaman dimuat
+</script>
+
+
+
        </body>
 </html>
