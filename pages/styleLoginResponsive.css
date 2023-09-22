@@ -1,0 +1,114 @@
+body {
+    display: flex;
+    justify-content: center; /* Mengatur formulir ke tengah secara horizontal */
+    align-items: center; /* Mengatur formulir ke tengah secara vertikal */
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center; /* Mengatur teks di dalam container ke tengah */
+}
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+/* Style the container */
+.container {
+    display: flex;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Style the left side */
+.left {
+    flex: 1;
+    padding: 30px;
+    text-align: center;
+    
+    
+}
+
+.left h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.left p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Style the logo image */
+.left img {
+    max-width: 100px;
+    height: auto;
+}
+
+/* Style the right side */
+.right {
+    flex: 1;
+    padding: 30px;
+}
+
+.right h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Style the form inputs */
+.input-container {
+    margin-bottom: 15px;
+}
+
+.input-container label {
+    font-size: 18px;
+    display: block;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+/* Style the login button */
+button[type="submit"] {
+    background-color: #007acc;
+
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Style the video */
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
