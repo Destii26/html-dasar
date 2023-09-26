@@ -22,7 +22,7 @@ header {
   nav ul li a {
    text-decoration: none;
    color: #910858
-   font-weight: bold;
+
   }
   body {
    background-image: url("../assets/background.jpg");
@@ -65,8 +65,8 @@ header {
    background-color: #ff5722;
    transition: background-color 0.3s ease-in-out;
   }
+
   
-  /produk/
   body {
    font-family: Arial, sans-serif;
    text-align: center;
