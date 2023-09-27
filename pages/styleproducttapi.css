@@ -1,225 +1,52 @@
-header {
-    background-image: url("../assets/background.jpg");
-   color: #910858;
-   padding: 20px;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-  }
-  .brand-name {
-   font-size: 30px;
-  }
-  
-  nav ul {
-   list-style: none;
-  }
-  
-  nav ul li {
-   display: inline;
-   margin-right: 20px;
-  }
-  
-  nav ul li a {
-   text-decoration: none;
-   color: #910858
+:root {
+  --bgcolor: #b438aa;
+  --textcolor: #140f2b;
+}
 
-  }
-  body {
-   background-image: url("../assets/background.jpg");
-   background-size: cover; 
-   background-repeat: no-repeat; 
-   background-attachment: fixed; 
-  }
-  
-  
-  
-  #hero {
-   background-image: url("../assets/background.jpg");
-   background-size: cover;
-   background-position: center;
-   color: #910858;
-   text-align: center;
-   padding: 100px 0;
-  }
-  
-  .hero-content h2 {
-   font-size: 36px;
-   margin-bottom: 20px;
-  }
-  
-  .hero-content p {
-   font-size: 18px;
-   margin-bottom: 30px;
-  }
-  
-  .btn {
-   background-color: #ff4500;
-   color: #e4d6de;
-   padding: 15px 30px;
-   text-decoration: none;
-   font-weight: bold;
-   border-radius: 5px;
-  }
-  
-  .btn:hover {
-   background-color: #ff5722;
-   transition: background-color 0.3s ease-in-out;
-  }
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--bgcolor);
+}
 
-  
-  body {
-   font-family: Arial, sans-serif;
-   text-align: center;
-   background-color: #f0f0f0;
-   margin: 0;
-   padding: 0;
-  }
-  
-  .gallery-heading {
-   color: #333;
-   padding: 20px;
-   text-align: center;
-  }
-  .product-container 
-  {
-   display: flex;
-   flex-wrap: wrap;
-   float: left;
-   justify-content: center;
-   align-items: center;
-   height: 100vh;;
-  }
-  
-  .carousel {
-           display: flex;
-           transition: transform 0.5s ease-in-out;
-       }
-  
-  .product-card {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   text-align: center;
-   width: 300px;
-   border: 1px solid #ccc;
-   margin: 20px;
-   padding: 10px;
-  }
-  
-  .product-card:hover 
-  {
-   transform: translateY(-5px);
-  }
-  .product-card img 
-  {
-    width: 200px;
-    height: 250px;
-    max-width: 200px;
-   border-top-left-radius: 5px;
-   border-top-right-radius: 5px;
-  }
-  
-  .product-details 
-  {
-   padding: 10px;
-  }
-  
-  .product-title {
-   color: #333;
-   font-size: 1.2rem;
-   margin: 10px 0;
-  }
-  
-  .product-description {
-   color: #777;
-   margin-bottom: 10px;
-  }
-  
-  .product-price {
-   color: #007bff;
-   font-weight: bold;
-  }
-  
-  @media (max-width: 768px) {
-   .product-card {
-       width: 45%;
-   }
-  }
-  
-  @media (max-width: 576px) {
-   .product-card {
-       width: 100%;
-   }
-  }
-  .pesan-button:hover {
-   background-color: #007bff;
-   color: #023f7079;
-   padding: 10px 20px;
-   border: none;
-   border-radius: 5px;
-   cursor: pointer;
-   font-size: 16px;
-  }
-  
-  .beli-button 
-  {
-   background-color: #007bff;
-   color: #fff;
-   padding: 5px 15px;
-   border: none;
-   border-radius: 5px;
-   cursor: pointer;
-   font-size: 14px;
-  }
-  
-  .beli-button:hover 
-  {
-   background-color: #0056b3;
-  }
-  footer {
-    color: #c02b9b;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  
-  .carousel-prev,
-  .carousel-next 
-  {
-  
-   color: #1114b4;
-   padding: 10px 20px;
-   border: none;
-   border-radius: var(--border);
-   margin: 10px;
-   cursor: pointer;
-  }
-  
-  .carousel-prev
-  {
-   float: left;
-  }
-  
-  .carousel-next
-  {
-   float: right;
-  }
-  
-  .carousel-prev:hover,
-  .carousel-next:hover 
-  {
-   background-color: var(--hitam);
-  }
-  
-  body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-  }
-  
-  main {
-    flex-grow: 1;
-  }
-  
-  
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  color: var(--textcolor);
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+.card:hover {
+      background-color: #ddd;
+  }

@@ -5,14 +5,14 @@
   let str = ``;
   for await (let items of data) {
     str += `<div class="column">
-      <div class="card">
-        <img src="${items.imagesrc}" width="55%" alt="produk">
-        <h3>${items.name}</h3>
-        <p>${items.price}<p/>
-        <p>${items.description}</p>
-        <a href="#">Lihat Produk</a>
-      </div>
-      </div>`;
+        <div class="card">
+          <img src="${items.imagesrc}" width="55%" alt="produk">
+          <h3>${items.name}</h3>
+          <p>${items.price}<p/>
+          <p>${items.description}</p>
+          <a href="#">Lihat Produk</a>
+        </div>
+        </div>`;
   }
   console.log(str);
   document.getElementById("rowuse").innerHTML = str;
