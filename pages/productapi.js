@@ -24,9 +24,9 @@ function nextSlide() {
 }
 
 // Fungsi untuk memperbarui tampilan carousel
-function updateCarousel() 
+function updateCarousel() {
   const offset = -currentIndex * (productCards[0].offsetWidth + 20); // Lebar produk + margin
-  carousel.style.transform = translateX(${offset}px);
+  carousel.style.transform = translateX(${offset}px); 
 
 // Array objek produk
 
